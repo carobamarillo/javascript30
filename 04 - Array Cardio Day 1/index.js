@@ -29,14 +29,34 @@
           return true;
         }
       */
+    console.log('Filter -> ')
     console.table(fifteen);
 
-    
+
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
 
+    const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+    
+    console.log('Map -> ')
+    console.table(fullNames);
+
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+
+    const ordered = inventors.sort((firstPerson, secondPerson) => firstPerson.year > secondPerson.year ? 1 : -1);
+
+    /*
+      (function (first, second) {
+        if (first.year > second.year) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    */  
+    console.log('Sort function ->');
+    console.table(ordered);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
