@@ -55,5 +55,4 @@ const index = comments.findIndex(comment => comment.id === 823423);
    ...comments.slice(index + 1)
  ];
 
-
 console.log(index);
