@@ -26,7 +26,7 @@ console.log(players, team);
 	Why? It's because that is an array reference, not an array copy. They both point to the same array!
 */
 // So, how do we fix this? We take a copy instead!
-console.clear();
+
 // one way
 const team2 = players.slice();
 // or create a new array and concat the old one in
